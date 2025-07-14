@@ -1,5 +1,5 @@
 
-name: Deploy OpenTofu to Azure
+name: Test Azure login
 
 on:
   push:
@@ -9,20 +9,5 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
-      # - name: Checkout
-      #   uses: actions/checkout@v4
-
-      # - name: Set up OpenTofu
-      #   uses: opentofu/setup-opentofu@4a98c1282d7d0763055637165e94b063d2348721 # v1 Feb 11 2025
-      #   with:
-      #     tofu_version: 'latest'
-
       - name: Azure Login
         uses: azure/login@bbcc074a232a35d7283353c18aabf0de1d557775 # v2 Mar 3 2025
-        # uses: azure/login@v2
-        # with:
-        #   client-id: ${{ secrets.AZURE_ENTRA_ID_CLIENT_ID }}
-        #   tenant-id: ${{ secrets.AZURE_ENTRA_ID_TENANT_ID }}
-        #   subscription-id: ${{ secrets.AZURE_ENTRA_ID_SUBSCRIPTION_ID }}
-        #   environment: 'AzureUSGovernment'
-        #   audience: api://AzureADTokenExchangeUSGov
